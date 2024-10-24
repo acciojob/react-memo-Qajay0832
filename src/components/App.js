@@ -16,11 +16,11 @@ const App = () => {
         ) { setSkillList((prev) => [...prev, skill]) } else { }
     }
   return (
-    <div>
+    <div id='main'>
       <UseMemo />
       <div>
         <p>{`Count: ${count}`}</p>
-        <button onClick={handleCount}>+</button>
+        <button id='incr-cnt' onClick={handleCount}>+</button>
       </div>
       <ReactMemo skill={skill} setSkill={setSkill} AddSkill={AddSkill} skillList={skillList} />
     </div>
