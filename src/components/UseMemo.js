@@ -13,7 +13,7 @@ const UseMemo = () => {
         <h1>React.useMemo</h1>
         <h2>My todos {todoCount}</h2>
         <div>
-            {todoList.map((e,i)=><div key={i}>{e}</div>)}
+            {todoList.map((e,i)=><div id={`todo-${i}`} key={i}>{e}</div>)}
         </div>
         <button id='add-todo-btn' onClick={handleTodo}>Add Todo</button>
     </div>
