@@ -1,0 +1,23 @@
+import React, { useMemo, useState } from 'react'
+
+const UseMemo = () => {
+    const [todoList,setTodoList]=useState([]);
+    const handleTodo=()=>{
+        setTodoList((prev)=>[...prev,'New Todo'])
+    }
+    const todoCount =useMemo(()=>{
+      return todoList.length
+    },[todoList])
+  return (
+    <div>
+        <h1>React.useMemo</h1>
+        <h2>My todos {todoCount}</h2>
+        <div>
+            {todoList.map((e,i)=><div key={i}>{e}</div>)}
+        </div>
+        <button onClick={handleTodo}>Add Todo</button>
+    </div>
+  )
+}
+
+export default UseMemo
